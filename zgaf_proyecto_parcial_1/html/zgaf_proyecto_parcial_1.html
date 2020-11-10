@@ -1,0 +1,1009 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>zgaf_proyecto_parcial_1</title><meta name="generator" content="MATLAB 9.6"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2020-09-12"><meta name="DC.source" content="zgaf_proyecto_parcial_1.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; } 
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><pre class="codeinput"><span class="keyword">function</span> varargout = zgaf_proyecto_parcial_1(varargin)
+<span class="comment">% ZGAF_PROYECTO_PARCIAL_1 MATLAB code for zgaf_proyecto_parcial_1.fig</span>
+<span class="comment">%      ZGAF_PROYECTO_PARCIAL_1, by itself, creates a new ZGAF_PROYECTO_PARCIAL_1 or raises the existing</span>
+<span class="comment">%      singleton*.</span>
+<span class="comment">%</span>
+<span class="comment">%      H = ZGAF_PROYECTO_PARCIAL_1 returns the handle to a new ZGAF_PROYECTO_PARCIAL_1 or the handle to</span>
+<span class="comment">%      the existing singleton*.</span>
+<span class="comment">%</span>
+<span class="comment">%      ZGAF_PROYECTO_PARCIAL_1('CALLBACK',hObject,eventData,handles,...) calls the local</span>
+<span class="comment">%      function named CALLBACK in ZGAF_PROYECTO_PARCIAL_1.M with the given input arguments.</span>
+<span class="comment">%</span>
+<span class="comment">%      ZGAF_PROYECTO_PARCIAL_1('Property','Value',...) creates a new ZGAF_PROYECTO_PARCIAL_1 or raises the</span>
+<span class="comment">%      existing singleton*.  Starting from the left, property value pairs are</span>
+<span class="comment">%      applied to the GUI before zgaf_proyecto_parcial_1_OpeningFcn gets called.  An</span>
+<span class="comment">%      unrecognized property name or invalid value makes property application</span>
+<span class="comment">%      stop.  All inputs are passed to zgaf_proyecto_parcial_1_OpeningFcn via varargin.</span>
+<span class="comment">%</span>
+<span class="comment">%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one</span>
+<span class="comment">%      instance to run (singleton)".</span>
+<span class="comment">%</span>
+<span class="comment">% See also: GUIDE, GUIDATA, GUIHANDLES</span>
+
+<span class="comment">% Edit the above text to modify the response to help zgaf_proyecto_parcial_1</span>
+
+<span class="comment">% Last Modified by GUIDE v2.5 12-Sep-2020 10:57:03</span>
+
+<span class="comment">% Begin initialization code - DO NOT EDIT</span>
+gui_Singleton = 1;
+gui_State = struct(<span class="string">'gui_Name'</span>,       mfilename, <span class="keyword">...</span>
+                   <span class="string">'gui_Singleton'</span>,  gui_Singleton, <span class="keyword">...</span>
+                   <span class="string">'gui_OpeningFcn'</span>, @zgaf_proyecto_parcial_1_OpeningFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_OutputFcn'</span>,  @zgaf_proyecto_parcial_1_OutputFcn, <span class="keyword">...</span>
+                   <span class="string">'gui_LayoutFcn'</span>,  [] , <span class="keyword">...</span>
+                   <span class="string">'gui_Callback'</span>,   []);
+<span class="keyword">if</span> nargin &amp;&amp; ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">else</span>
+    gui_mainfcn(gui_State, varargin{:});
+<span class="keyword">end</span>
+<span class="comment">% End initialization code - DO NOT EDIT</span>
+
+
+
+<span class="comment">% --- Executes just before zgaf_proyecto_parcial_1 is made visible.</span>
+<span class="keyword">function</span> zgaf_proyecto_parcial_1_OpeningFcn(hObject, eventdata, handles, varargin)
+<span class="comment">% This function has no output args, see OutputFcn.</span>
+<span class="comment">% hObject    handle to figure</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+<span class="comment">% varargin   command line arguments to zgaf_proyecto_parcial_1 (see VARARGIN)</span>
+
+<span class="comment">% Choose default command line output for zgaf_proyecto_parcial_1</span>
+handles.output = hObject;
+
+<span class="comment">% Update handles structure</span>
+guidata(hObject, handles);
+
+<span class="comment">% UIWAIT makes zgaf_proyecto_parcial_1 wait for user response (see UIRESUME)</span>
+<span class="comment">% uiwait(handles.figure1);</span>
+
+
+<span class="comment">% --- Outputs from this function are returned to the command line.</span>
+<span class="keyword">function</span> varargout = zgaf_proyecto_parcial_1_OutputFcn(hObject, eventdata, handles)
+<span class="comment">% varargout  cell array for returning output args (see VARARGOUT);</span>
+<span class="comment">% hObject    handle to figure</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Get default command line output from handles structure</span>
+varargout{1} = handles.output;
+
+
+<span class="comment">% --- Executes on button press in btnTurnOn.</span>
+<span class="keyword">function</span> btnTurnOn_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to btnTurnOn (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+imaqreset
+a=videoinput(<span class="string">'winvideo'</span>,1, <span class="string">'MJPG_1280x720'</span>);
+axes(handles.imgPhoto);
+hImage = image(zeros(656,1184,3),<span class="string">'parent'</span>,handles.imgPhoto);
+preview(a,hImage)
+
+
+
+
+<span class="comment">% --- Executes on button press in btnTakePicture.</span>
+<span class="keyword">function</span> btnTakePicture_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to btnTakePicture (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+imaqreset
+a=videoinput(<span class="string">'winvideo'</span>,1, <span class="string">'MJPG_1280x720'</span>);
+axes(handles.imgPhoto);
+Imagen = getsnapshot(a);
+handles.imagen=Imagen;
+handles.filto = Imagen;
+guidata(hObject,handles);
+
+image(handles.imagen);
+
+axes(handles.imgToProcess);
+image(handles.imagen);
+
+
+
+handles.A=handles.imagen;
+handles.A(:,:,1);
+handles.A(:,:,2);
+handles.A(:,:,3)=0;
+
+handles.R=handles.imagen;
+handles.R(:,:,1);
+handles.R(:,:,2)=0;
+handles.R(:,:,3)=0;
+
+handles.V=handles.imagen;
+handles.V(:,:,1);
+handles.V(:,:,2)=0;
+handles.V(:,:,3);
+
+handles.B=handles.imagen;
+handles.B(:,:,1)=0;
+handles.B(:,:,2)=0;
+handles.B(:,:,3);
+
+handles.G=handles.imagen;
+handles.G(:,:,1)=0;
+handles.G(:,:,2);
+handles.G(:,:,3)=0;
+
+handles.N=handles.imagen;
+handles.N(:,:,1);
+handles.N(:,:,2)=164;
+handles.N(:,:,3)=32;
+
+handles.I=handles.imagen;
+handles.I(:,:,1)=0;
+handles.I(:,:,2);
+handles.I(:,:,3);
+
+guidata(hObject,handles)
+
+
+
+
+
+<span class="comment">% --- Executes on button press in btnTurnOff.</span>
+<span class="keyword">function</span> btnTurnOff_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to btnTurnOff (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+a=videoinput(<span class="string">'winvideo'</span>,1);
+stop(a)
+delete(a)
+close (gcf)
+
+
+<span class="comment">% --- Executes on button press in cmbAmarillo.</span>
+<span class="keyword">function</span> cmbAmarillo_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbAmarillo (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbAmarillo</span>
+handles.filto = handles.A;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.A)
+
+
+
+<span class="comment">% --- Executes on button press in cmbRojo.</span>
+<span class="keyword">function</span> cmbRojo_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbRojo (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbRojo</span>
+handles.filto = handles.R;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.R)
+
+
+
+
+<span class="comment">% --- Executes on button press in cmbVioleta.</span>
+<span class="keyword">function</span> cmbVioleta_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbVioleta (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbVioleta</span>
+handles.filto = handles.V;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.V)
+
+
+
+<span class="comment">% --- Executes on button press in cmbAzul.</span>
+<span class="keyword">function</span> cmbAzul_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbAzul (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbAzul</span>
+handles.filto = handles.B;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.B)
+
+
+<span class="comment">% --- Executes on button press in cmbVerde.</span>
+<span class="keyword">function</span> cmbVerde_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbVerde (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbVerde</span>
+handles.filto = handles.G;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.G)
+
+
+<span class="comment">% --- Executes on button press in cmbNaranja.</span>
+<span class="keyword">function</span> cmbNaranja_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbNaranja (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbNaranja</span>
+handles.filto = handles.N;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.N)
+
+
+<span class="comment">% --- Executes on button press in cmbIndigo.</span>
+<span class="keyword">function</span> cmbIndigo_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbIndigo (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbIndigo</span>
+handles.filto = handles.I;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.I)
+
+
+<span class="comment">% --- Executes on button press in cbOption1.</span>
+<span class="keyword">function</span> cbOption1_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cbOption1 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cbOption1</span>
+
+handles.filto = (handles.R + handles.B) .* handles.N;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.filto)
+
+
+
+
+
+
+
+<span class="comment">% --- Executes on button press in cmbOption2.</span>
+<span class="keyword">function</span> cmbOption2_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbOption2 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbOption2</span>
+handles.filto = (handles.R + handles.G) .* (handles.V + handles.A);
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.filto)
+
+
+<span class="comment">% --- Executes on button press in cmbOption3.</span>
+<span class="keyword">function</span> cmbOption3_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to cmbOption3 (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hint: get(hObject,'Value') returns toggle state of cmbOption3</span>
+handles.filto = (handles.V + handles.R) + 10 .* (handles.A + handles.N);
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.filto)
+
+
+<span class="comment">% --- Executes on slider movement.</span>
+<span class="keyword">function</span> sldBrillo_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to sldBrillo (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'Value') returns position of slider</span>
+<span class="comment">%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider</span>
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+
+G = imadjust(handles.filto,[],[],get(hObject,<span class="string">'Value'</span>));
+axes(handles.imgToProcess);
+image(G)
+
+
+
+<span class="keyword">function</span> sldBrillo_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to sldBrillo (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: slider controls usually have a light gray background.</span>
+<span class="keyword">if</span> isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,[.9 .9 .9]);
+<span class="keyword">end</span>
+
+
+<span class="comment">% --- Executes on slider movement.</span>
+<span class="keyword">function</span> sldContrast_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to sldContrast (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'Value') returns position of slider</span>
+<span class="comment">%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider</span>
+T = [get(hObject, <span class="string">'Value'</span>), 1];
+J = handles.filto;
+K = imadjust(J, stretchlim(J,T), [0 1]);
+
+axes(handles.imgToProcess);
+image(K)
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> sldContrast_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to sldContrast (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: slider controls usually have a light gray background.</span>
+<span class="keyword">if</span> isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,[.9 .9 .9]);
+<span class="keyword">end</span>
+
+
+<span class="comment">% --- Executes on slider movement.</span>
+<span class="keyword">function</span> sldEcualizator_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to sldEcualizator (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+<span class="comment">% Hints: get(hObject,'Value') returns position of slider</span>
+<span class="comment">%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider</span>
+T = [get(hObject, <span class="string">'Value'</span>), 1];
+    J = handles.filto;
+    K = imadjust(J,[],stretchlim(J,T));
+
+    axes(handles.imgToProcess);
+image(K)
+
+
+
+<span class="comment">% --- Executes during object creation, after setting all properties.</span>
+<span class="keyword">function</span> sldEcualizator_CreateFcn(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to sldEcualizator (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    empty - handles not created until after all CreateFcns called</span>
+
+<span class="comment">% Hint: slider controls usually have a light gray background.</span>
+<span class="keyword">if</span> isequal(get(hObject,<span class="string">'BackgroundColor'</span>), get(0,<span class="string">'defaultUicontrolBackgroundColor'</span>))
+    set(hObject,<span class="string">'BackgroundColor'</span>,[.9 .9 .9]);
+<span class="keyword">end</span>
+
+
+
+
+
+<span class="comment">% --- Executes on button press in btnInsert.</span>
+<span class="keyword">function</span> btnInsert_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to btnInsert (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+imagen=double(imread(<span class="string">'R1.jpg'</span>));
+axes(handles.imgR1);
+image(imagen/255);
+colormap <span class="string">gray</span>;
+axis <span class="string">off</span>;
+
+
+
+
+
+<span class="comment">% --- Executes on button press in btnBone.</span>
+<span class="keyword">function</span> btnBone_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to btnBone (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+
+img=double(imread(<span class="string">'R1.jpg'</span>));
+img=img(:,:,1)/255;
+filt= (1/121) *ones(11);
+<span class="keyword">for</span> a= 1:3
+    img= conv2(img,filt, <span class="string">'same'</span>);
+<span class="keyword">end</span>
+
+colormap <span class="string">bone</span>;
+axes(handles.imgR13D);
+surf(img); view([0, 45, 160]); axis <span class="string">off</span>; shading <span class="string">interp</span>;
+pause(0.2);
+
+
+
+<span class="comment">% --- Executes on button press in btnSkin.</span>
+<span class="keyword">function</span> btnSkin_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to btnSkin (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+img=double(imread(<span class="string">'R1.jpg'</span>));
+img=img(:,:,1)/255;
+filt= (1/121) *ones(11);
+<span class="keyword">for</span> a= 1:3
+    img= conv2(img,filt, <span class="string">'same'</span>);
+<span class="keyword">end</span>
+
+colormap <span class="string">pink</span>;
+axes(handles.imgR13D);
+surf(img); view([0, 45, 160]); axis <span class="string">off</span>; shading <span class="string">interp</span>;
+pause(0.2);
+
+
+
+<span class="comment">% --- Executes on button press in btnBoth.</span>
+<span class="keyword">function</span> btnBoth_Callback(hObject, eventdata, handles)
+<span class="comment">% hObject    handle to btnBoth (see GCBO)</span>
+<span class="comment">% eventdata  reserved - to be defined in a future version of MATLAB</span>
+<span class="comment">% handles    structure with handles and user data (see GUIDATA)</span>
+img=double(imread(<span class="string">'R1.jpg'</span>));
+img=img(:,:,1)/255;
+filt= (1/121) *ones(11);
+<span class="keyword">for</span> a= 1:3
+    img= conv2(img,filt, <span class="string">'same'</span>);
+<span class="keyword">end</span>
+
+colormap([gray(35);pink(15);gray(20);pink(30)]);
+axes(handles.imgR13D);
+surf(img); view([0, 45, 160]); axis <span class="string">off</span>; shading <span class="string">interp</span>;
+
+pause(0.2);
+</pre><img vspace="5" hspace="5" src="zgaf_proyecto_parcial_1_01.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2019a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function varargout = zgaf_proyecto_parcial_1(varargin)
+% ZGAF_PROYECTO_PARCIAL_1 MATLAB code for zgaf_proyecto_parcial_1.fig
+%      ZGAF_PROYECTO_PARCIAL_1, by itself, creates a new ZGAF_PROYECTO_PARCIAL_1 or raises the existing
+%      singleton*.
+%
+%      H = ZGAF_PROYECTO_PARCIAL_1 returns the handle to a new ZGAF_PROYECTO_PARCIAL_1 or the handle to
+%      the existing singleton*.
+%
+%      ZGAF_PROYECTO_PARCIAL_1('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in ZGAF_PROYECTO_PARCIAL_1.M with the given input arguments.
+%
+%      ZGAF_PROYECTO_PARCIAL_1('Property','Value',...) creates a new ZGAF_PROYECTO_PARCIAL_1 or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before zgaf_proyecto_parcial_1_OpeningFcn gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to zgaf_proyecto_parcial_1_OpeningFcn via varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help zgaf_proyecto_parcial_1
+
+% Last Modified by GUIDE v2.5 12-Sep-2020 10:57:03
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @zgaf_proyecto_parcial_1_OpeningFcn, ...
+                   'gui_OutputFcn',  @zgaf_proyecto_parcial_1_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes just before zgaf_proyecto_parcial_1 is made visible.
+function zgaf_proyecto_parcial_1_OpeningFcn(hObject, eventdata, handles, varargin)
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to zgaf_proyecto_parcial_1 (see VARARGIN)
+
+% Choose default command line output for zgaf_proyecto_parcial_1
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+
+% UIWAIT makes zgaf_proyecto_parcial_1 wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+% REPLACE_WITH_DASH_DASH- Outputs from this function are returned to the command line.
+function varargout = zgaf_proyecto_parcial_1_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in btnTurnOn.
+function btnTurnOn_Callback(hObject, eventdata, handles)
+% hObject    handle to btnTurnOn (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+imaqreset
+a=videoinput('winvideo',1, 'MJPG_1280x720');
+axes(handles.imgPhoto);
+hImage = image(zeros(656,1184,3),'parent',handles.imgPhoto);
+preview(a,hImage)
+
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in btnTakePicture.
+function btnTakePicture_Callback(hObject, eventdata, handles)
+% hObject    handle to btnTakePicture (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+imaqreset
+a=videoinput('winvideo',1, 'MJPG_1280x720');
+axes(handles.imgPhoto);
+Imagen = getsnapshot(a);
+handles.imagen=Imagen;
+handles.filto = Imagen;
+guidata(hObject,handles);
+
+image(handles.imagen);
+
+axes(handles.imgToProcess);
+image(handles.imagen);
+
+
+
+handles.A=handles.imagen;
+handles.A(:,:,1);
+handles.A(:,:,2);
+handles.A(:,:,3)=0;
+
+handles.R=handles.imagen;
+handles.R(:,:,1);
+handles.R(:,:,2)=0;
+handles.R(:,:,3)=0;
+
+handles.V=handles.imagen;
+handles.V(:,:,1);
+handles.V(:,:,2)=0;
+handles.V(:,:,3);
+
+handles.B=handles.imagen;
+handles.B(:,:,1)=0;
+handles.B(:,:,2)=0;
+handles.B(:,:,3);
+
+handles.G=handles.imagen;
+handles.G(:,:,1)=0;
+handles.G(:,:,2);
+handles.G(:,:,3)=0;
+
+handles.N=handles.imagen;
+handles.N(:,:,1);
+handles.N(:,:,2)=164;
+handles.N(:,:,3)=32;
+
+handles.I=handles.imagen;
+handles.I(:,:,1)=0;
+handles.I(:,:,2);
+handles.I(:,:,3);
+
+guidata(hObject,handles)
+
+
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in btnTurnOff.
+function btnTurnOff_Callback(hObject, eventdata, handles)
+% hObject    handle to btnTurnOff (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+a=videoinput('winvideo',1);
+stop(a)
+delete(a)
+close (gcf) 
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbAmarillo.
+function cmbAmarillo_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbAmarillo (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbAmarillo
+handles.filto = handles.A;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.A)
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbRojo.
+function cmbRojo_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbRojo (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbRojo
+handles.filto = handles.R;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.R)
+ 
+ 
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbVioleta.
+function cmbVioleta_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbVioleta (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbVioleta
+handles.filto = handles.V;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.V)
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbAzul.
+function cmbAzul_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbAzul (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbAzul
+handles.filto = handles.B;
+guidata(hObject,handles)
+
+axes(handles.imgToProcess);
+image(handles.B)
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbVerde.
+function cmbVerde_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbVerde (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbVerde
+handles.filto = handles.G;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.G)
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbNaranja.
+function cmbNaranja_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbNaranja (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbNaranja
+handles.filto = handles.N;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.N)
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbIndigo.
+function cmbIndigo_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbIndigo (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbIndigo
+handles.filto = handles.I;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.I)
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cbOption1.
+function cbOption1_Callback(hObject, eventdata, handles)
+% hObject    handle to cbOption1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cbOption1
+
+handles.filto = (handles.R + handles.B) .* handles.N;
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.filto)
+
+
+
+
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbOption2.
+function cmbOption2_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbOption2 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbOption2
+handles.filto = (handles.R + handles.G) .* (handles.V + handles.A);
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.filto)
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in cmbOption3.
+function cmbOption3_Callback(hObject, eventdata, handles)
+% hObject    handle to cmbOption3 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of cmbOption3
+handles.filto = (handles.V + handles.R) + 10 .* (handles.A + handles.N);
+guidata(hObject,handles)
+axes(handles.imgToProcess);
+image(handles.filto)
+
+
+% REPLACE_WITH_DASH_DASH- Executes on slider movement.
+function sldBrillo_Callback(hObject, eventdata, handles)
+% hObject    handle to sldBrillo (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+
+G = imadjust(handles.filto,[],[],get(hObject,'Value'));
+axes(handles.imgToProcess);
+image(G)
+
+
+
+function sldBrillo_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to sldBrillo (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+% REPLACE_WITH_DASH_DASH- Executes on slider movement.
+function sldContrast_Callback(hObject, eventdata, handles)
+% hObject    handle to sldContrast (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+T = [get(hObject, 'Value'), 1];
+J = handles.filto;
+K = imadjust(J, stretchlim(J,T), [0 1]);
+
+axes(handles.imgToProcess);
+image(K)
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function sldContrast_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to sldContrast (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+% REPLACE_WITH_DASH_DASH- Executes on slider movement.
+function sldEcualizator_Callback(hObject, eventdata, handles)
+% hObject    handle to sldEcualizator (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'Value') returns position of slider
+%        get(hObject,'Min') and get(hObject,'Max') to determine range of slider
+T = [get(hObject, 'Value'), 1];
+    J = handles.filto;
+    K = imadjust(J,[],stretchlim(J,T));
+    
+    axes(handles.imgToProcess);
+image(K)
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes during object creation, after setting all properties.
+function sldEcualizator_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to sldEcualizator (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: slider controls usually have a light gray background.
+if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in btnInsert.
+function btnInsert_Callback(hObject, eventdata, handles)
+% hObject    handle to btnInsert (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+imagen=double(imread('R1.jpg'));
+axes(handles.imgR1);
+image(imagen/255); 
+colormap gray;
+axis off;
+
+
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in btnBone.
+function btnBone_Callback(hObject, eventdata, handles)
+% hObject    handle to btnBone (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+img=double(imread('R1.jpg'));
+img=img(:,:,1)/255;
+filt= (1/121) *ones(11);
+for a= 1:3
+    img= conv2(img,filt, 'same');
+end
+
+colormap bone; 
+axes(handles.imgR13D);
+surf(img); view([0, 45, 160]); axis off; shading interp;
+pause(0.2); 
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in btnSkin.
+function btnSkin_Callback(hObject, eventdata, handles)
+% hObject    handle to btnSkin (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+img=double(imread('R1.jpg'));
+img=img(:,:,1)/255;
+filt= (1/121) *ones(11);
+for a= 1:3
+    img= conv2(img,filt, 'same');
+end
+
+colormap pink; 
+axes(handles.imgR13D);
+surf(img); view([0, 45, 160]); axis off; shading interp;
+pause(0.2); 
+
+
+
+% REPLACE_WITH_DASH_DASH- Executes on button press in btnBoth.
+function btnBoth_Callback(hObject, eventdata, handles)
+% hObject    handle to btnBoth (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+img=double(imread('R1.jpg'));
+img=img(:,:,1)/255;
+filt= (1/121) *ones(11);
+for a= 1:3
+    img= conv2(img,filt, 'same');
+end
+
+colormap([gray(35);pink(15);gray(20);pink(30)]); 
+axes(handles.imgR13D);
+surf(img); view([0, 45, 160]); axis off; shading interp;
+
+pause(0.2); 
+
+##### SOURCE END #####
+--></body></html>
